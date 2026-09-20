@@ -32,8 +32,12 @@ app.get("/", (req, res) => {
   res.send("Saarthi Backend API is running. Explore /api/health, /api/schemes, /api/partners, /api/chat.");
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`[Saarthi API] Server listening on port ${PORT}`);
-  console.log(`[Saarthi API] Health check: http://localhost:${PORT}/api/health`);
-});
+// Start server locally when not running in a serverless environment (e.g. Vercel)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`[Saarthi API] Server listening on port ${PORT}`);
+    console.log(`[Saarthi API] Health check: http://localhost:${PORT}/api/health`);
+  });
+}
+
+export default app;

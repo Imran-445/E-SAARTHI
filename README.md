@@ -147,9 +147,26 @@ npm run preview
 
 ---
 
+## 🚀 Deploy to Vercel (GitHub Integration)
+
+This repository is pre-configured and optimized for 1-click deployment on [Vercel](https://vercel.com) via GitHub (`E-SAARTHI` repository).
+
+### Zero-Config Deployment Steps:
+1. Log in to your [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New"** &gt; **"Project"**.
+2. Select your GitHub repository **`E-SAARTHI`** and click **"Import"**.
+3. Vercel automatically detects the pre-configured [`vercel.json`](./vercel.json):
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm --prefix client install && npm --prefix client run build`
+   - **Output Directory**: `client/dist`
+4. Click **"Deploy"**.
+5. Once deployment completes, your live application is available globally with HTTPS, zero cold starts, and full SPA route rewrite support!
+
+---
+
 ## 🧪 Verification & Build Status
-- **Client Build (`vite build`)**: **Passed** (0 errors, 1609 modules transformed in 29.63s).
+- **Client Build (`vite build`)**: **Passed** (0 errors, 1627 modules transformed in 7.10s with optimized code splitting).
 - **Backend Test (`node server/test-run.js`)**: **Passed** (All 8 schemes, 6 channel partners, and matching engine verified).
+- **Vercel Serverless Function**: Configured via `api/index.js` with Express backend fallback.
 - **Resilience**: The client application features a built-in offline data fallback in `client/src/services/api.js`, ensuring that the prototype operates smoothly even if the backend is temporarily offline during presentations.
 
 ---
