@@ -1,0 +1,17 @@
+{
+  "name": "saarthi-sih2026",
+  "version": "1.0.0",
+  "description": "Saarthi - AI-Driven Scheme Matching for Marginalized Entrepreneurs (SIH 2026, Problem Statement 26092, Team DigITal Pioneer)",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "Team DigITal Pioneer",
+  "license": "MIT"
+}
